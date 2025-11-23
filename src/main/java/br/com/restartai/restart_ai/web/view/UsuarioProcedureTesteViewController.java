@@ -28,16 +28,34 @@ public class UsuarioProcedureTesteViewController {
     @PostMapping("/teste")
     public String executarProcedureTeste(RedirectAttributes redirectAttributes) {
         usuarioProcedureService.inserirUsuario(
-                "Usuario Procedure Teste",
-                "11122233344",
-                LocalDate.of(2000, 1, 1),
-                "teste.video@restart.com",
-                "123456"
+                "Ana Beatriz Souza",
+                "12345678988",
+                LocalDate.of(1998, 3, 15),
+                "ana.beatriz@restart.com",
+                "senhaAna123"
         );
 
         redirectAttributes.addFlashAttribute(
                 "mensagemSucesso",
-                "Procedure executada e usuário de teste criado com sucesso."
+                "Usuária de teste (Ana Beatriz Souza) criada via procedure."
+        );
+
+        return "redirect:/procedures/usuarios/teste";
+    }
+
+    @PostMapping("/teste2")
+    public String executarSegundoTeste(RedirectAttributes redirectAttributes) {
+        usuarioProcedureService.inserirUsuario(
+                "Carlos Eduardo Lima",
+                "98765432100",
+                LocalDate.of(1995, 9, 30),
+                "carlos.eduardo@restart.com",
+                "senhaCarlos123"
+        );
+
+        redirectAttributes.addFlashAttribute(
+                "mensagemSucesso",
+                "Usuário de teste 2 (Carlos Eduardo Lima) criado via procedure."
         );
 
         return "redirect:/procedures/usuarios/teste";

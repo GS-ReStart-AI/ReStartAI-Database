@@ -44,12 +44,12 @@ public class SecurityConfig {
                                 "/api/usuarios/**",
                                 "/api/procedures/usuarios/**",
                                 "/procedures/usuarios/**",
+                                "/procedures/curriculos/**",
                                 "/swagger-ui/**",
                                 "/v3/api-docs/**",
                                 "/v3/api-docs.yaml",
                                 "/actuator/health",
-                                "/error",
-                                "/procedures/usuarios**/"
+                                "/error"
                         ).permitAll()
                         .anyRequest().authenticated()
                 )
