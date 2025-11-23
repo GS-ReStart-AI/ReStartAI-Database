@@ -34,7 +34,6 @@ public class SecurityConfig {
                                 "/",
                                 "/login",
                                 "/usuarios/cadastro",
-                                "/usuarios/cadastro-form",
                                 "/curriculo",
                                 "/perfil",
                                 "/css/**",
@@ -43,11 +42,14 @@ public class SecurityConfig {
                                 "/api/auth/**",
                                 "/api/curriculos/**",
                                 "/api/usuarios/**",
+                                "/api/procedures/usuarios/**",
+                                "/procedures/usuarios/**",
                                 "/swagger-ui/**",
                                 "/v3/api-docs/**",
                                 "/v3/api-docs.yaml",
                                 "/actuator/health",
-                                "/error"
+                                "/error",
+                                "/procedures/usuarios**/"
                         ).permitAll()
                         .anyRequest().authenticated()
                 )
